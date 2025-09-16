@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairSafe - Your Hair Health Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="pro-header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/WhatsApp Image 2025-08-08 at 22.39.11_9044dde0.jpg" alt="HairSafe Logo" class="site-logo">
+            <h1>HairSafe</h1>
+        </a>
+    </div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#treatments">Treatments</a>
+        <a href="index.html#products">Products</a>
+    </nav>
+    <div class="header-cta">
+        <a href="tel:+910000000000" class="contact-number"><i class="fas fa-phone-alt"></i> +91 00000 00000</a>
+        <a href="cart.html" class="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-counter" class="cart-counter">0</span>
+        </a>
+        <a href="login.html" class="cta-button">My Account</a>
+    </div>
+</header>
+
+    <section class="hero-pro">
+        <div class="hero-content">
+            <h2 class="hero-headline">Don't let hair concerns hold you back.</h2>
+            <p class="hero-subheadline">Take control with HairSafe's expert-backed solutions.</p>
+            <ul class="hero-features">
+                <li><i class="fas fa-check-circle"></i> Backed by Science</li>
+                <li><i class="fas fa-check-circle"></i> Personalized for You</li>
+            </ul>
+            <a href="#products" class="cta-button-main">Explore Products</a>
+        </div>
+        <div class="hero-image-container">
+            <img src="images/hero place.jpg" alt="Woman with healthy hair">
+            <div class="offer-badge">
+                <div class="offer-text">
+                    UPTO
+                    <span>50%</span>
+                    OFF
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="about" class="about-section">
+    <div class="about-container">
+        <div class="founder-card">
+            <img src="images/portfoliopic.jpg" alt="Surisetti Charan">
+            <div class="founder-info">
+                <h3>Surisetti Charan</h3>
+                <p>Founder, HairSafe</p>
+            </div>
+        </div>
+        <div class="about-content">
+            <h2>Pioneering Proactive Hair Wellness</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <p><strong>HairSafe</strong> is an innovative web application led by <strong>Surisetti Charan</strong>, Our team consists of certified trichologists and tech experts dedicated to revolutionizing hair care.</p>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <p>Our core mission is to help you <strong>identify and address hair concerns at the earliest stage</strong>. We believe proactive care is the key to preventing long-term problems and maintaining healthy, beautiful hair for life.</p>
+                </li>
+            </ul>
+            <a href="login.html" class="cta-button">Begin Your Journey</a>
+        </div>
+    </div>
+</section>
+<section id="treatments" class="treatment-section">
+    <div class="section-title">
+        <h2>Virtual Hair & Scalp Consultation</h2>
+    </div>
+    <div class="treatment-container">
+        <div class="treatment-info">
+            <h3>Connect With a Certified Trichologist</h3>
+            <p>Get professional, one-on-one advice from the comfort of your home. Our experts are here to help you understand your hair's needs and create a personalized treatment plan.</p>
+            <ul class="treatment-steps">
+                <li><span>1</span> Describe your hair or scalp concern in the form.</li>
+                <li><span>2</span> Upload a clear picture for a more accurate diagnosis.</li>
+                <li><span>3</span> Submit your request, and our team will contact you to schedule a video call.</li>
+                <li><span>4</span> Receive a personalized regimen with product recommendations.</li>
+            </ul>
+        </div>
+        <div class="treatment-form-panel">
+            <h4>Start Your Consultation</h4>
+            <form id="consultation-form" onsubmit="handleConsultationSubmit(event)">
+                <label for="problem-description">Describe your problem (e.g., hair fall, dandruff, dryness)</label>
+                <textarea id="problem-description" placeholder="The more detail, the better..." required></textarea>
+                
+                <label for="problem-pic" class="upload-button">
+                    <i class="fas fa-camera"></i> Add a Picture (Optional)
+                </label>
+                <input type="file" id="problem-pic" accept="image/*" onchange="updateFileName()">
+                <span id="file-name-display"></span>
+
+                <button type="submit" class="cta-button">Book Video Consultation</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="featured-treatments">
+    <div class="section-title">
+        <h2>Featured Hair Treatments</h2>
+    </div>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="treatment-card">
+                    <img src="images/hair fall control.jpeg" alt="Hair Fall Control">
+                    <div class="card-content">
+                        <h3>Hair Fall Control Therapy</h3>
+                        <p>Our advanced therapy enhances blood flow to follicles and strengthens roots to effectively reduce hair fall and promote healthier growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="treatment-card">
+                    <img src="images/dandruf.jpeg" alt="Dandruff & Scalp Health">
+                    <div class="card-content">
+                        <h3>Dandruff & Scalp Health</h3>
+                        <p>A deep-cleansing treatment that removes flakes, soothes irritation, and restores the scalp's natural balance for long-term relief.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="treatment-card">
+                    <img src="images/hair re.jpg" alt="Hair Regrowth">
+                    <div class="card-content">
+                        <h3>Hair Regrowth Stimulation</h3>
+                        <p>Utilizes cutting-edge technology to activate dormant hair follicles, encouraging new growth and increasing overall hair density.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="treatment-card">
+                    <img src="images/grey.jpeg" alt="Grey Hair Reversal">
+                    <div class="card-content">
+                        <h3>Grey Hair Reversal</h3>
+                        <p>A natural formula packed with minerals that helps kickstart re-pigmentation and restore your hair's original, vibrant color over time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="treatment-card">
+                    <img src="images/hair trans.jpg" alt="Hair Transplantation">
+                    <div class="card-content">
+                        <h3>Hair Transplantation</h3>
+                        <p>A minimally invasive procedure for natural-looking results with faster healing, accelerated growth, and increased hair density.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+    <div id="products">
+        <h2 class="section-title">Our Bestsellers</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="images/revital.jpeg" alt="Shampoo A">
+                <h3>Revitalizing Shampoo</h3>
+                <p>Revitalizes dry scalp. Price: 120</p>
+                <button onclick="addToCart({name: 'Revitalizing Shampoo', price: 22, image: 'https://i.postimg.cc/0N5p2g6k/shampoo-3d.png'})">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/growth.jpeg" alt="Oil B">
+                <h3>Growth-Boost Oil</h3>
+                <p>Promotes hair growth. Price: 200</p>
+                <button onclick="addToCart({name: 'Growth-Boost Oil', price: 25, image: 'https://i.postimg.cc/jSY4tzH4/hair-oil-3d.png'})">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/anti fall.jpeg" alt="Serum C">
+                <h3>Anti-Fall Serum</h3>
+                <p>Prevents hair fall. Price: 350</p>
+                <button onclick="addToCart({name: 'Anti-Fall Serum', price: 30, image: 'https://i.postimg.cc/zXHPkXgS/hair-serum-3d.png'})">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/hydra.jpeg" alt="Conditioner D">
+                <h3>Hydrating Conditioner</h3>
+                <p>For smooth, silky hair. Price: 260</p>
+                <button onclick="addToCart({name: 'Hydrating Conditioner', price: 20, image: 'https://i.postimg.cc/mD8g0TqW/conditioner-3d.png'})">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast-notification" class="toast"></div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column about">
+            <h4>HairSafe</h4>
+            <p>Your dedicated partner in proactive hair wellness. We provide expert-backed solutions and products to help you achieve your best hair health.</p>
+        </div>
+        <div class="footer-column links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#treatments">Treatments</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:hairsafeofficial@gmail.com">hairsafeofficial@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 00000 00000</span>
+                </li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.instagram.com/hairsafe_cy?igsh=NGxpdnA1NDhkeTd1" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 HairSafe. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

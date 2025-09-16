@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - HairSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="pro-header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/WhatsApp Image 2025-08-08 at 22.39.11_9044dde0.jpg" alt="HairSafe Logo" class="site-logo">
+            <h1>HairSafe</h1>
+        </a>
+    </div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#treatments">Treatments</a>
+        <a href="index.html#products">Products</a>
+    </nav>
+    <div class="header-cta">
+        <a href="tel:+910000000000" class="contact-number"><i class="fas fa-phone-alt"></i> +91 00000 00000</a>
+        <a href="cart.html" class="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-counter" class="cart-counter">0</span>
+        </a>
+        <a href="login.html" class="cta-button">My Account</a>
+    </div>
+</header>
+
+    <main class="payment-page">
+        <h2>Checkout</h2>
+        <div class="checkout-container">
+            <div class="payment-form">
+                <h3>Select Payment Method</h3>
+                <form id="main-payment-form">
+                    <div class="payment-methods">
+                        <label>
+                            <input type="radio" name="payment-method" value="card" checked>
+                            <i class="fas fa-credit-card"></i> Credit / Debit Card
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="upi">
+                            <i class="fab fa-google-pay"></i> UPI
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="cod">
+                            <i class="fas fa-hand-holding-usd"></i> Cash on Delivery
+                        </label>
+                    </div>
+
+                    <div id="card-payment-content" class="payment-content">
+                        <label for="name">Cardholder Name</label>
+                        <input type="text" id="name" required>
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1111-2222-3333-4444" required>
+                        <div class="form-row">
+                            <div>
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div>
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="upi-payment-content" class="payment-content" style="display: none;">
+                        <p>Scan the QR code with your UPI app or pay to the UPI ID below.</p>
+                        <img src="https://i.postimg.cc/13YpQ695/sample-qr-code.png" alt="Sample QR Code" style="max-width: 200px; margin: 10px auto; display: block;">
+                        <p style="text-align: center; font-weight: bold;">hairsafeofficial@upi</p>
+                    </div>
+
+                    <div id="cod-payment-content" class="payment-content" style="display: none;">
+                        <p>You can pay in cash to our courier when you receive the goods at your doorstep.</p>
+                        <p>Please keep the exact amount ready for a faster delivery process.</p>
+                    </div>
+                    
+                    <button type="submit" id="submit-payment-btn">Pay Now</button>
+                </form>
+            </div>
+            <div class="order-summary" id="order-summary">
+                <h3>Order Summary</h3>
+                </div>
+        </div>
+    </main>
+    
+    <div id="order-success-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <img src="https://i.postimg.cc/L6H2x1sT/check-mark-3d.png" alt="Success" class="popup-icon">
+            <h2 id="popup-title">Order Placed!</h2>
+            <p id="popup-message">Thank you for your purchase. Your order is being processed.</p>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

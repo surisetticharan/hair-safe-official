@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - HairSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="pro-header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/WhatsApp Image 2025-08-08 at 22.39.11_9044dde0.jpg" alt="HairSafe Logo" class="site-logo">
+            <h1>HairSafe</h1>
+        </a>
+    </div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#treatments">Treatments</a>
+        <a href="index.html#products">Products</a>
+    </nav>
+    <div class="header-cta">
+        <a href="tel:+910000000000" class="contact-number"><i class="fas fa-phone-alt"></i> +91 00000 00000</a>
+        <a href="cart.html" class="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-counter" class="cart-counter">0</span>
+        </a>
+        <a href="login.html" class="cta-button">My Account</a>
+    </div>
+</header>
+
+    <main class="account-page">
+        <div class="form-container">
+            <div id="login-form">
+                <h2>Login</h2>
+                <form onsubmit="handleLogin(event)">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required>
+                    
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                    
+                    <button type="submit">Login</button>
+                    <p class="toggle-link">Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up</a></p>
+                </form>
+            </div>
+
+            <div id="signup-form" style="display: none;">
+                <h2>Create Account</h2>
+                <form onsubmit="handleSignUp(event)">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" required>
+                    
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required>
+                    
+                    <button type="submit">Sign Up</button>
+                    <p class="toggle-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column about">
+            <h4>HairSafe</h4>
+            <p>Your dedicated partner in proactive hair wellness. We provide expert-backed solutions and products to help you achieve your best hair health.</p>
+        </div>
+        <div class="footer-column links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#treatments">Treatments</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:hairsafeofficial@gmail.com">hairsafeofficial@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 00000 00000</span>
+                </li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.instagram.com/hairsafe_cy?igsh=NGxpdnA1NDhkeTd1" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 HairSafe. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
